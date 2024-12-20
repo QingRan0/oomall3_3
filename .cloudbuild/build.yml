@@ -1,0 +1,18 @@
+# This YAML is the default template and can be modified based on this 
+---
+version: 2.0
+steps:
+  PRE_BUILD:
+  - checkout:
+      name: "checkout"
+      inputs:
+        scm: "codehub"
+        url: "git@codehub.devcloud.cn-north-4.huaweicloud.com:36dd051d2c9646e8bb61daaf3f330f23/oomall-2024.git"
+        branch: "master"
+        lfs: false
+        submodule: false
+  BUILD:
+  - sh:
+      name: "sh"
+      inputs:
+        command: "echo hello"
